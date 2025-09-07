@@ -1,0 +1,18 @@
+<BrowerRouter>
+    <Routes>
+        <Route> // main layout
+            <Route path="" element={}/> sub layout
+        </Route>
+    </Routes>
+</BrowerRouter>
+
+
+MainLayout :
+    <Link to="/">asas</Link>
+    <div>
+        <Outlet/> // show element of sub layout
+    </div>
+
+
+
+==> video : finished 21. master layout
