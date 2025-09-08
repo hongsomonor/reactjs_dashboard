@@ -9,7 +9,7 @@ const MainLayoutLogin = () => {
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
         </div>
-        <div>
+        <div className='w-full h-[600px] bg-gray-300'>
             <Outlet/>
         </div>
     </div>

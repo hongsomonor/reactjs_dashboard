@@ -12,7 +12,9 @@ const MainLayout = () => {
             <Link to="/register">Register</Link>
             <Link to="/invoice">Invoice</Link>
         </div>
-        <Outlet/>
+        <div className='w-full h-[600px] bg-gray-300'>
+            <Outlet/>
+        </div>
         <footer>
             <h1 className='text-4xl font-bold text-sky-600 text-center w-full p-5 bg-gray-600 '>Footer</h1>
         </footer>
