@@ -6,6 +6,8 @@ import RegisterPage from "./pages/auth/RegisterPage"
 import PageNotFound from "./pages/404/PageNotFound"
 import MainLayout from "./components/layout/MainLayout"
 import MainLayoutLogin from "./components/layout/MainLayoutLogin"
+import ProductPage from "./pages/product/ProductPage"
+import CustomerPage from "./pages/customer/CustomerPage"
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
 
         <Route element={<MainLayout/>}> {/* click smth in main layout to redirect to any route */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/product" element={<ProductPage/>} />
+          <Route path="/customer" element={<CustomerPage/>} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<PageNotFound />} /> {/* if page not found */}
         </Route>
