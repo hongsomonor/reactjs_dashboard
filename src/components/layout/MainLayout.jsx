@@ -10,9 +10,11 @@ import {
 
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import { Outlet, useNavigate } from "react-router-dom";
-import Logo from "../../../public/images/logo.png";
-import User from "../../../public/images/user.png"
-
+import Logo from "../../assets/images/logo.png";
+import User from "../../assets/images/user.png"
+import { FaUsers } from "react-icons/fa6";
+import { AiOutlineProduct } from "react-icons/ai";
+import { CgBrowser } from "react-icons/cg";
 
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -25,11 +27,14 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem("Dahsboard", "/", <PieChartOutlined />),
-  getItem("Customer", "/customer", <DesktopOutlined />),
-  getItem("Product", "/product", <DesktopOutlined />),
-  getItem("About", "/about", <DesktopOutlined />),
+  getItem("Customer", "/customer", <FaUsers />),
+  getItem("Product", "/product", <AiOutlineProduct />),
+  getItem("About", "/about", <CgBrowser />),
   getItem("User", "/user", <UserOutlined />, [
-    getItem("User", "/user/list"),
+    getItem("User", "/user/list" , <UserOutlined/> , [
+      getItem("User1", "/user/user1"),
+      getItem("User2", "/user/user2"),
+    ]),
     getItem("Roe", "/user/role"),
   ]),
   getItem("Team", "sub2", <TeamOutlined />, [
@@ -68,15 +73,15 @@ const MainLayout = () => {
             <img src={Logo} className="size-[60px] rounded-full" alt="" />
             <div>
               <h1 className="text-2xl font-bold text-gray-600">SMN</h1>
-              <p>Build IT Skill</p>
+              <p className="text-[16px] font-semibold text-gray-600">Build IT Skill</p>
             </div>
           </div>
           <div className="flex gap-2">
             <div>
               <h1 className="text-2xl font-bold text-gray-600">Caramel</h1>
-              <p className="text-[18px] font-semibold text-gray-600">Admin</p>
+              <p className="text-[16px] font-semibold text-gray-600">Admin</p>
             </div>
-            <img src={User} className="size-[60px] rounded-[10px]" alt="" />
+            <img src={User} className="size-[60px] rounded-full" alt="" />
           </div>
         </div>
 
